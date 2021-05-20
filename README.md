@@ -22,7 +22,7 @@ namespace App\Http\Livewire;
 
 use App\Actions\CreateFlight;
 
-app(CreateFlight::class)->create($input);
+return app(CreateFlight::class)->create($input);
 ```
 
 
@@ -40,7 +40,7 @@ class CreateFlight implements CreateFlights
           // Do something...
         ])->validate();
 
-        Flight::create($input);
+        return Flight::create($input);
     }
 }
 ```
