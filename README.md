@@ -5,7 +5,7 @@
 #### Livewire内でのモデルの取得/生成
 コンポーネント単位で提供される非同期の処理をアクションと呼び出し、 `App\Actions` 直下にまとめましょう。
 
-##### Bad
+**Bad**
 
 ```PHP
 namespace App\Http\Livewire;
@@ -16,7 +16,7 @@ use App\Models\Flight;
 $flight = Flight::create($input);
 ```
 
-##### Good
+**Good**
 ```PHP
 namespace App\Http\Livewire;
 
