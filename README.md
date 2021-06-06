@@ -2,6 +2,20 @@
 
 ## Coding ✍️
 
+#### Livewireコンポーネントの利用
+Livewireコンポーネントを呼び出す場合、書き方は1つに統一しましょう。
+
+**Bad**
+```PHP
+<livewire:some-component />
+```
+
+**Good**
+```PHP
+@livewire('some-component')
+```
+
+
 #### Livewire内でのモデルの取得/生成
 コンポーネント単位で提供される非同期の処理をアクションと呼び出し、 `App\Actions` 直下にまとめましょう。
 
