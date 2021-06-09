@@ -1,5 +1,11 @@
 # yy-deliver-coding
 
+**Contents**
+- [Livewireコンポーネントの利用](#livewireコンポーネントの利用)
+- [Livewire内でのモデルの取得と生成](#livewire内でのモデルの取得と生成)
+- [ポーリング時のリクエスト](#ポーリング時のリクエスト)
+
+
 ## Coding ✍️
 
 #### Livewireコンポーネントの利用
@@ -16,7 +22,7 @@ Livewireコンポーネントを呼び出す場合、書き方は1つに統一�
 ```
 
 
-#### Livewire内でのモデルの取得/生成
+#### Livewire内でのモデルの取得と生成
 コンポーネント単位で提供される非同期の処理をアクションと呼び出し、 `App\Actions` 直下にまとめましょう。
 
 **Bad**
@@ -67,4 +73,28 @@ interface CreateFlights
 {
     public function create(array $input);
 }
+```
+
+#### ポーリング時のリクエスト
+
+ポーリングを行う際、沢山のリクエストを防ぐため、インターバルの時間を指定してください。
+また、インターバルの時間は明示的に全て記述してください。
+
+**Bad**
+
+```PHP
+<div wire:poll>
+    Current time: {{ now() }}
+</div>
+```
+
+**Good**
+
+```PHP
+
+```PHP
+<div wire:poll.5s>
+    Current time: {{ now() }}
+</div>
+```
 ```
