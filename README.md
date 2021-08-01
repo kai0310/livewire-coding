@@ -91,8 +91,6 @@ interface CreateFlights
 **Good**
 
 ```PHP
-
-```PHP
 <div wire:poll.5s>
     Current time: {{ now() }}
 </div>
