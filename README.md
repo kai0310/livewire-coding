@@ -1,4 +1,4 @@
-# yy-deliver-coding
+# livewire-coding
 
 **Contents**
 - [Livewireコンポーネントの利用](#livewireコンポーネントの利用)
@@ -94,5 +94,4 @@ interface CreateFlights
 <div wire:poll.5s>
     Current time: {{ now() }}
 </div>
-```
 ```
